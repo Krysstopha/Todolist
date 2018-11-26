@@ -1,0 +1,43 @@
+* {
+  font-family: "Roboto";
+  font-size: 12px; }
+
+body {
+  background-color: #292929; }
+
+#mainInstruction {
+  font-family: "Roboto";
+  font-size: 36px;
+  text-align: center;
+  color: white; }
+
+#mainArea {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+#additionButton {
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 5px; }
+
+.taskStyle {
+  width: 800px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: white; }
+
+.taskDays {
+  width: 800px;
+  height: 50px;
+  border: 1px solid #E3E3E3;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px; }
+
+#timeAct {
+  font-size: 24px;
+  color: white; }
+
+/*# sourceMappingURL=main.css.map */
