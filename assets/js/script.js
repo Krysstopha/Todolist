@@ -1,3 +1,17 @@
+//-------- Welcome Function (COMPLETE)
+$(document).ready(function(){
+  // Declare variable for the username
+  // var name = prompt("What is your name?"); ---- UN COMMENT
+  // Declare variable for the greeting
+  var greeting = "Welcome " + "Christopher" + ".";
+  // Inject the greeting to the mainInstruction
+  var mainText = document.getElementById("mainInstruction");
+  mainText.textContent = greeting;
+  console.log(name); // Check
+  console.log(greeting); // Check
+});
+//-------- End Function
+
 //-------- Task Addition Function (INCOMPLETE)
 $(document).ready(function(){
   // Click button to activate function
@@ -15,21 +29,6 @@ $(document).ready(function(){
 });
 //-------- End Function
 
-//-------- Welcome Function (COMPLETE)
-function sayHello(){
-  // Declare variable for the username
-  // var name = prompt("What is your name?"); ---- UN COMMENT
-  // Declare variable for the greeting
-  var greeting = "Welcome " + "Christopher" + ", please add a task.";
-  // Inject the greeting to the mainInstruction
-  var mainText = document.getElementById("mainInstruction");
-  mainText.textContent = greeting;
-  console.log(name); // Check
-  console.log(greeting); // Check
-};
-sayHello();
-//-------- End Function
-
 //-------- Day for Task Function (INCOMPLETE)
 /* function dayForTask(){
   var dayOne = getDay();
@@ -37,12 +36,14 @@ sayHello();
   console.log(dayOne);
 };
 dayForTask(); */
+//-------- End Function
 
 //-------- Check Time Function (COMPLETE)
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 };
+//-------- End Function
 
 //-------- Time Function (INCOMPLETE)
 $(document).ready(function(){
