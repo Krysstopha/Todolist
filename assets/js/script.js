@@ -7,7 +7,7 @@ $(document).ready(function(){
   // Inject the greeting to the mainInstruction
   var mainText = document.getElementById("mainInstruction");
   mainText.textContent = greeting;
-  console.log(name); // Check
+  console.log(name + "No Name yet dw"); // Check
   console.log(greeting); // Check
 });
 //-------- End Function
@@ -23,31 +23,34 @@ $(document).ready(function(){
     // This is a check to make sure it worked
     console.log("This worked");
   });
-// Ending Brace for document.ready
 });
 //-------- End Function
 
 //-------- Day for Task Function (INCOMPLETE)
-/* function dayForTask(){
-  var dayOne = getDay();
+$(document).ready(function(){
+  var today = new Date();
+  var day   = today.getDay();
+  var result = document.getElementById("date");
+  result.textContent = day;
+  console.log(today);
+  console.log(day);
+});
 
-  console.log(dayOne);
-};
-dayForTask(); */
 //-------- End Function
 
-//-------- Check Time Function (COMPLETE)
+//-------- Check Time Function
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 };
 //-------- End Function
 
-//-------- Time Function (INCOMPLETE)
-$(document).ready(function(){
+//-------- Time Function
+function localTime() {
   var today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
+  var s = today.getSeconds();
   m = checkTime(m);
   if(h > 12) {
     h = h-12;
@@ -55,6 +58,8 @@ $(document).ready(function(){
   else {
     h = h;
   }
-  document.getElementById("timeAct").innerHTMl = h + ":" + m;
-  // var t = setTimeout(localTime, 500);
-});
+  var result = document.getElementById("time");
+  result.textContent = h + ":" + m;
+  var t = setTimeout(localTime, 500);
+};
+//-------- End Function
