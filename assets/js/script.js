@@ -17,11 +17,14 @@ $(document).ready(function(){
   // Click button to activate function
   $("button").click(function(){
     // Create variable for the div and add class
-    var newItem = "<div class=taskDays contenteditable=true>Add a </div>";
+    var newItem = "<div class=taskDays contenteditable=true>Add a Task</div>";
     // Add the div to the mainArea
     $("#mainArea").append(newItem);
     // This is a check to make sure it worked
     console.log("This worked");
+  });
+  $("taskDays").click(function(){
+
   });
 });
 //-------- End Function
@@ -35,20 +38,55 @@ $(document).ready(function(){
 //-------- Day for Task Function (INCOMPLETE)
 $(document).ready(function(){
   var today   = new Date();
-  var weekDay = today.getDay();
-  var day     = today.getDate();
-  var result  = document.getElementById("date");
+  var weekDay = today.getDay();   // Original value for day of the week
+  var day     = today.getDate();  // Original value for month day
+  var finalWeekDay;               // Final value for day of the week
+  var daySuffix;                  // Final value for month day
 
-  // Test which suffix to add to the date
+  // Test which suffix to add
   if (day == 1 ||  day == 31){
-    result.textContent = day + "st"; // Suffix for first
+    daySuffix = "st"; // Suffix for first
   } else if (day == 2 || day == 22){
-    result.textContent = day + "nd"; // Suffix for second
+    daySuffix = "nd"; // Suffix for second
   } else if (day == 3 || day == 23 ){
-    result.textContent = day + "rd"; // Suffix for third
+    daySuffix = "rd"; // Suffix for third
   } else {
-    result.textContent = day + "th"; // Suffix for other
+    daySuffix = "th"; // Suffix for other
   }
+  // Test which day of the week
+  switch (weekDay) {
+    case 0:
+    finalWeekDay = "Sunday";
+    break;
+    case 1:
+    finalWeekDay = "Monday";
+    break;
+    case 2:
+    finalWeekDay = "Tuesday";
+    break;
+    case 3:
+    finalWeekDay = "Wednesday";
+    break;
+    case 4:
+    finalWeekDay = "Thursday";
+    break;
+    case 5:
+    finalWeekDay = "Friday";
+    break;
+    case 6:
+    finalWeekDay = "Saturday";
+    break;
+  }
+  var result = [document.getElementById("date0"), document.getElementById("date1"),
+                document.getElementById("date2"), document.getElementById("date3"),
+                document.getElementById("date4"), document.getElementById("date5"),
+                document.getElementById("date6"),]; // Array for collecting html
+  for (i = 0; i < result.length; i++){
+    result[i].textContent = finalWeekDay + " " + day + daySuffix;
+  }
+
+  //-------- Function to correctly display time for each 7 day task list
+
 });
 //-------- End Function
 

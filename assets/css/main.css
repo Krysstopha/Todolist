@@ -1,6 +1,7 @@
 * {
   font-family: "Roboto";
-  font-size: 12px; }
+  font-size: 12px;
+  color: white; }
 
 ::-webkit-scrollbar {
   color: #768fff;
@@ -31,7 +32,7 @@ body {
   font-size: 20px;
   color: white; }
 
-#date {
+#date0, #date1, #date2, #date3, #date4, #date5, #date6 {
   font-size: 24px;
   color: white; }
 
@@ -52,5 +53,11 @@ body {
   border-bottom: 1px solid #E3E3E3;
   color: white;
   font-size: 20px; }
+
+.urgencyCircle {
+  height: 25px;
+  width: 25px;
+  background-color: #768fff;
+  border-radius: 50%; }
 
 /*# sourceMappingURL=main.css.map */
