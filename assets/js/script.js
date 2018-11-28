@@ -1,9 +1,9 @@
 //-------- Welcome Function (COMPLETE)
 $(document).ready(function(){
   // Declare variable for the username
-  // var name = prompt("What is your name?"); ---- UN COMMENT
+  //var name = prompt("What is your name?"); //---- UN COMMENT
   // Declare variable for the greeting
-  var greeting = "Welcome " + "Christopher" + ".";
+  var greeting = "Welcome " /*+ name*/ + ".";
   // Inject the greeting to the mainInstruction
   var mainText = document.getElementById("mainInstruction");
   mainText.textContent = greeting;
@@ -16,12 +16,10 @@ $(document).ready(function(){
 $(document).ready(function(){
   // Click button to activate function
   $("button").click(function(){
-    // Create variable for the div
-    var newItem = "<div class=taskDays>Hi</div>";
+    // Create variable for the div and add class
+    var newItem = "<div class=taskDays contenteditable=true>Hi</div>";
     // Add the div to the mainArea
     $("#mainArea").append(newItem);
-    // Add the class to the div
-    $(newItem).addClass("taskStyle"); // Need to get this to fkn work
     // This is a check to make sure it worked
     console.log("This worked");
   });

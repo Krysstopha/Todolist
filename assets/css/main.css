@@ -2,6 +2,10 @@
   font-family: "Roboto";
   font-size: 12px; }
 
+::-webkit-scrollbar {
+  color: #768fff;
+  display: none; }
+
 body {
   background-color: #292929; }
 
