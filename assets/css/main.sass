@@ -3,6 +3,7 @@
   font-family: 'Roboto'
   font-size: 12px
 
+// Removing the scroll bar
 @mixin scrollbars
 ::-webkit-scrollbar
   color: #768fff
@@ -12,12 +13,37 @@
 body
   background-color: #292929
 
-// Title
-#mainInstruction
-  font-family: 'Roboto'
-  font-size: 36px
-  text-align: center
+// Header and its elements
+#headerBox
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  #mainHeader
+    font-family: 'Roboto'
+    font-size: 36px
+    text-align: center
+    color: white
+
+// Time Styles
+#timeBox
+  display: flex
+  justify-content: center
+
+#time
+  font-size: 46px
   color: white
+#or
+  font-size: 20px
+  color: white
+#date
+  font-size: 24px
+  color: white
+
+// Task addition button
+#additionButton
+  font-size: 16px
+  border: 1px solid black
+  border-radius: 5px
 
 // Todolist item flex box
 #mainArea
@@ -26,33 +52,11 @@ body
   flex-direction: column
 // Fix the fkn flexbox so it actually sits in the middle ffs
 
-// Button to add a task
-#additionButton
-  font-size: 16px
-  border: 1px solid black
-  border-radius: 5px
-
 // Task Style
-.taskStyle
-  width: 800px
-  height: 100px
-  border: 1px solid black
-  border-radius: 15px
-  color: white
-
 .taskDays
   width: 800px
   height: 50px
-  border: 1px solid #E3E3E3
-  border-radius: 15px
+  border-top: 1px solid #E3E3E3
+  border-bottom: 1px solid #E3E3E3
   color: white
   font-size: 20px
-
-// Time Style
-#time
-  font-size: 24px
-  color: white
-
-#date
-  font-size: 24px
-  color: white

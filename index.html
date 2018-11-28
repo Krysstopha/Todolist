@@ -11,15 +11,19 @@
 <!-- Body of document -->
 <body onload="localTime()">
 <!-- Title div -->
-  <div>
-    <h1 id="mainInstruction"></h1>
-    <h1 id="time"></h1>
-    <h1 id="date"></h1>
-    <button id="additionButton">Add Task</button>
+  <div id="headerBox">
+    <h1 id="mainHeader"></h1>
   </div>
+  <div id="timeBox">
+    <p id="time"></p>
+    <p id="or"></p>
+  </div>
+  <!-- <button id="additionButton">Add Task</button> -->
 <!-- Tasks div -->
   <div id="mainArea">
   <!-- Tasks injected by Javascript go here -->
+    <div class="taskDays" contenteditable="true">Add a Task</div>
+    <h1 id="date"></h1>
   </div>
 </body>
 <!-- End of body -->

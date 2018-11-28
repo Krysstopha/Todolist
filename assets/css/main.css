@@ -9,43 +9,48 @@
 body {
   background-color: #292929; }
 
-#mainInstruction {
-  font-family: "Roboto";
-  font-size: 36px;
-  text-align: center;
+#headerBox {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+  #headerBox #mainHeader {
+    font-family: "Roboto";
+    font-size: 36px;
+    text-align: center;
+    color: white; }
+
+#timeBox {
+  display: flex;
+  justify-content: center; }
+
+#time {
+  font-size: 46px;
   color: white; }
 
-#mainArea {
-  display: flex;
-  align-items: center;
-  flex-direction: column; }
+#or {
+  font-size: 20px;
+  color: white; }
+
+#date {
+  font-size: 24px;
+  color: white; }
 
 #additionButton {
   font-size: 16px;
   border: 1px solid black;
   border-radius: 5px; }
 
-.taskStyle {
-  width: 800px;
-  height: 100px;
-  border: 1px solid black;
-  border-radius: 15px;
-  color: white; }
+#mainArea {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
 
 .taskDays {
   width: 800px;
   height: 50px;
-  border: 1px solid #E3E3E3;
-  border-radius: 15px;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
   color: white;
   font-size: 20px; }
-
-#time {
-  font-size: 24px;
-  color: white; }
-
-#date {
-  font-size: 24px;
-  color: white; }
 
 /*# sourceMappingURL=main.css.map */
