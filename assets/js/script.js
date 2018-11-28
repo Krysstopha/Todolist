@@ -77,14 +77,15 @@ $(document).ready(function(){
     finalWeekDay = "Saturday";
     break;
   }
+  // Array for collecting html
   var result = [document.getElementById("date0"), document.getElementById("date1"),
                 document.getElementById("date2"), document.getElementById("date3"),
                 document.getElementById("date4"), document.getElementById("date5"),
-                document.getElementById("date6"),]; // Array for collecting html
+                document.getElementById("date6"),];
+  // Loop to set the date for each day in 7-day view
   for (i = 0; i < result.length; i++){
     result[i].textContent = finalWeekDay + " " + day + daySuffix;
   }
-
   //-------- Function to correctly display time for each 7 day task list
 
 });
@@ -119,8 +120,8 @@ function localTime() {
   var h2 = today.getHours(); // 2nd getHours() for a new value
   var or = document.getElementById("or");
   if(h2 < 12){
-    or.textContent = "am";
+    or.textContent = "am"; // if hour is less than 12, put am
   } else
-    or.textContent = "pm";
+    or.textContent = "pm"; // if hour is greater than or equal to 12, put pm
 };
 //-------- End Function
