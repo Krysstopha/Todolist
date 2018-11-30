@@ -23,11 +23,23 @@ $(document).ready(function(){
     // This is a check to make sure it worked
     console.log("This worked");
   });
+  // Function to get rid of text when clicked (Only default text)
   $("taskDays").click(function(){
-
+    $(this).innerHTML = "";
+  });
+  // Function to change color of circles
+  $("additionCircle").hover(function(){
+    $(this).hide();
   });
 });
 //-------- End Function
+
+//-------- Cursor changes based on clicking Function
+$(document).ready(function(){
+  $("#firstTaskBox").click(function(){
+    $(this).css("cursor: context-menu");
+  });
+});
 
 //-------- Level of Urgency Function
 $(document).ready(function(){

@@ -1,7 +1,8 @@
 * {
   font-family: "Roboto";
   font-size: 12px;
-  color: white; }
+  color: white;
+  cursor: context-menu; }
 
 ::-webkit-scrollbar {
   color: #768fff;
@@ -46,9 +47,13 @@ body {
   align-items: center;
   flex-direction: column; }
 
+.taskBox {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+
 .taskDays {
-  width: 800px;
-  height: 50px;
+  width: 600px;
+  height: 40px;
   border-top: 1px solid #E3E3E3;
   border-bottom: 1px solid #E3E3E3;
   color: white;
@@ -58,14 +63,21 @@ body {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  cursor: pointer; }
 
-.urgencyCircle {
-  height: 30px;
-  width: 30px;
+.additionCircle {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
   background-color: #768fff;
   border-radius: 50%;
   text-align: center;
-  font-size: 24px; }
+  font-size: 14px;
+  cursor: context-menu; }
+
+.additionButtonHover {
+  background-color: #292929;
+  color: #768fff; }
 
 /*# sourceMappingURL=main.css.map */
