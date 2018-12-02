@@ -47,6 +47,7 @@ body {
   align-items: center;
   flex-direction: column; }
 
+/* Task styles */
 .taskBox {
   padding-top: 25px;
   padding-bottom: 25px; }
@@ -64,10 +65,12 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: pointer; }
+  cursor: pointer;
+  visibility: hidden; }
 
 .additionCircle {
   height: 20px;
+  /* Corresponds with the height, pretty cool */
   line-height: 20px;
   width: 20px;
   background-color: #768fff;
@@ -79,5 +82,8 @@ body {
 .additionButtonHover {
   background-color: #292929;
   color: #768fff; }
+
+.visible {
+  visibility: visible; }
 
 /*# sourceMappingURL=main.css.map */

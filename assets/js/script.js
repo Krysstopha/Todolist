@@ -1,4 +1,4 @@
-//-------- Welcome Function (COMPLETE)
+//-------- Welcome Function
 $(document).ready(function(){
   // Declare variable for the username
   //var name = prompt("What is your name?"); //---- UN COMMENT
@@ -7,8 +7,6 @@ $(document).ready(function(){
   // Inject the greeting to the mainInstruction
   var mainText = document.getElementById("mainHeader");
   mainText.textContent = greeting;
-  console.log(name + "No Name yet dw"); // Check
-  console.log(greeting); // Check
 });
 //-------- End Function
 
@@ -23,23 +21,30 @@ $(document).ready(function(){
     // This is a check to make sure it worked
     console.log("This worked");
   });
-  // Function to get rid of text when clicked (Only default text)
-  $("taskDays").click(function(){
-    $(this).innerHTML = "";
-  });
-  // Function to change color of circles
-  $("additionCircle").hover(function(){
-    $(this).hide();
-  });
 });
 //-------- End Function
 
 //-------- Cursor changes based on clicking Function
 $(document).ready(function(){
-  $("#firstTaskBox").click(function(){
-    $(this).css("cursor: context-menu");
-  });
+  // Variable to select all the task boxes
+  var taskBox = document.getElementsByClassName("taskDays");
+  // Code to watch for press, and change the cursor
+  Array.from(taskBox).forEach(v => v.addEventListener("click", function(){
+    $(this).css("cursor", "auto"); // Takes time to occur, not sure why
+  }));
 });
+//-------- End Function
+
+//-------- Deciding which task box to show from common circle class
+$(document).ready(function(){
+  // Variable to select all the addition circles
+  var circles = document.getElementsByClassName("additionCircle");
+  // Code to watch for press, and toggle respective task
+  Array.from(circles).forEach(v => v.addEventListener("click", function() {
+  this.parentElement.getElementsByClassName("taskDays")[0].classList.toggle("visible");
+  }));
+});
+// End of Function
 
 //-------- Level of Urgency Function
 $(document).ready(function(){
@@ -93,7 +98,7 @@ $(document).ready(function(){
   var result = [document.getElementById("date0"), document.getElementById("date1"),
                 document.getElementById("date2"), document.getElementById("date3"),
                 document.getElementById("date4"), document.getElementById("date5"),
-                document.getElementById("date6"),];
+                document.getElementById("date6")];
   // Loop to set the date for each day in 7-day view
   for (i = 0; i < result.length; i++){
     result[i].textContent = finalWeekDay + " " + day + daySuffix;

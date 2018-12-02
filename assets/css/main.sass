@@ -54,11 +54,13 @@ body
   flex-direction: column
 // Fix the fkn flexbox so it actually sits in the middle ffs
 
-// Task Style
+/* Task styles */
+// Container for tasks
 .taskBox
   padding-top: 25px
   padding-bottom: 25px
 
+// Tasks added
 .taskDays
   width: 600px
   height: 40px
@@ -73,9 +75,12 @@ body
   -ms-user-select: none
   user-select: none
   cursor: pointer
+  visibility: hidden
 
+// Circle to add tasks
 .additionCircle
   height: 20px
+  /* Corresponds with the height, pretty cool */
   line-height: 20px
   width: 20px
   background-color: #768fff
@@ -85,5 +90,8 @@ body
   cursor: context-menu
 
 .additionButtonHover
-    background-color: #292929
-    color: #768fff
+  background-color: #292929
+  color: #768fff
+
+.visible
+  visibility: visible
